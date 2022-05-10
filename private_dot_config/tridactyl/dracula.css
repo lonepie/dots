@@ -39,6 +39,7 @@
     --tridactyl-cmdl-fg: var(--bg);
     --tridactyl-cmdl-font-family: var(--font);
     --tridactyl-cmplt-font-family: var(--font);
+    --tridactyl-hintspan-font-family: var(--font);
 
     /* Hint character tags */
     --tridactyl-hintspan-fg: var(--bg) !important;
