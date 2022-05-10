@@ -1,0 +1,19 @@
+" General Settings
+set update.lastchecktime 1652066788478
+set configversion 2.0
+set theme dracula
+set smoothscroll true
+set scrollduration 80
+set hintchars asdfgwertzxcvb
+
+" Binds
+bind O fillcmdline tabopen
+bind d stop
+bind x tabclose
+bind t fillcmdline tab
+unbind <C-f>
+bind j scrollline 7
+bind k scrollline -7
+
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
