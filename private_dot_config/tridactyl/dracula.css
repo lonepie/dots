@@ -1,31 +1,44 @@
 :root {    /* Dracula by Chris Kempson (http://chriskempson.com) */
-    --base00: #282936;
+    --base00: #282a36;
     --base01: #3a3c4e;
-    --base02: #4d4f68;
-    --base03: #626483;
-    --base04: #62d6e8;
-    --base05: #e9e9f4;
+    --base02: #44475a;
+    --base03: #6272a4;
+    --base04: #8be9fd;
+    --base05: #f8f8f2;
     --base06: #f1f2f8;
     --base07: #f7f7fb;
-    --base08: #ea51b2;
+    --base08: #ff79c6;
     --base09: #b45bcf;
-    --base0A: #00f769;
-    --base0B: #ebff87;
-    --base0C: #a1efe4;
-    --base0D: #62d6e8;
-    --base0E: #b45bcf;
+    --base0A: #50fa7b;
+    --base0B: #f1fa8c;
+    --base0C: #ff5555;
+    --base0D: #ffb86c;
+    --base0E: #bd93f9;
     --base0F: #00f769;
+    --bg: #282a36;
+    --currentline: #44475a;
+    --fg: #f8f8f2;
+    --comment: #6272a4;
+    --cyan: #8be9fd;
+    --green: #50fa7b;
+    --orange: #ffb86c;
+    --pink: #ff79c6;
+    --purple: #bd93f9;
+    --red: #ff5555;
+    --yellow: #f1fa8c;
 
-    --tridactyl-fg: var(--base05);
-    --tridactyl-bg: var(--base00);
+    --tridactyl-fg: var(--fg);
+    --tridactyl-bg: var(--bg);
     --tridactyl-url-fg: var(--base08);
-    --tridactyl-url-bg: var(--base00);
-    --tridactyl-highlight-box-bg: var(--base0E);
-    --tridactyl-highlight-box-fg: var(--base00);
+    --tridactyl-url-bg: var(--bg);
+    --tridactyl-highlight-box-bg: var(--currentline);
+    --tridactyl-highlight-box-fg: var(--fg);
+    --tridactyl-of-fg: var(--fg);
+    --tridactyl-of-bg: var(--currentline);
 
     /* Hint character tags */
-    --tridactyl-hintspan-fg: var(--base00) !important;
-    --tridactyl-hintspan-bg: var(--base0A) !important;
+    --tridactyl-hintspan-fg: var(--bg) !important;
+    --tridactyl-hintspan-bg: var(--green) !important;
 
     /* Element Highlights */
     --tridactyl-hint-active-fg: none;
@@ -36,8 +49,8 @@
 }
 
 #command-line-holder {    order: 1;
-    border: 2px solid var(--base0E);
-    color: var(--tridactyl-bg);
+    border: 2px solid var(--purple);
+    background: var(--tridactyl-bg);
 }
 
 #tridactyl-input {    padding: 1rem;
@@ -131,18 +144,18 @@
     bottom: 0 !important;
     background: var(--tridactyl-bg) !important;
     border: unset !important;
-    border: 1px var(--base0E) solid !important;
+    border: 1px var(--purple) solid !important;
     font-size: 12pt !important;
     /*font-weight: 200 !important;*/
     padding: 0.8ex !important;
 }
 
-#completions .focused {    background: var(--base0E);
-    color: var(--base00);
+#completions .focused {    background: var(--pink);
+    color: var(--bg);
 }
 
-#completions .focused .url {    background: var(--base0E);
-    color: var(--base00);
+#completions .focused .url {    background: var(--pink);
+    color: var(--bg);
 }
 /* #Ocean-normal { */
 /*  border-color: green !important; */
