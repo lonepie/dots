@@ -1,20 +1,4 @@
-:root {    /* Dracula by Chris Kempson (http://chriskempson.com) */
-    --base00: #282a36;
-    --base01: #3a3c4e;
-    --base02: #44475a;
-    --base03: #6272a4;
-    --base04: #8be9fd;
-    --base05: #f8f8f2;
-    --base06: #f1f2f8;
-    --base07: #f7f7fb;
-    --base08: #ff79c6;
-    --base09: #b45bcf;
-    --base0A: #50fa7b;
-    --base0B: #f1fa8c;
-    --base0C: #ff5555;
-    --base0D: #ffb86c;
-    --base0E: #bd93f9;
-    --base0F: #00f769;
+:root {    /* Dracula Colors */
     --bg: #282a36;
     --currentline: #44475a;
     --fg: #f8f8f2;
@@ -30,7 +14,7 @@
 
     --tridactyl-fg: var(--fg);
     --tridactyl-bg: var(--bg);
-    --tridactyl-url-fg: var(--base08);
+    --tridactyl-url-fg: var(--pink);
     --tridactyl-url-bg: var(--bg);
     --tridactyl-highlight-box-bg: var(--currentline);
     --tridactyl-highlight-box-fg: var(--fg);
@@ -53,12 +37,14 @@
     --tridactyl-hint-outline: none;
 }
 
-#command-line-holder {    order: 1;
+#command-line-holder {
+    order: 1;
     border: 2px solid var(--purple);
     background: var(--tridactyl-bg);
 }
 
-#tridactyl-input {    padding: 1rem;
+#tridactyl-input {
+    padding: 1rem;
     color: var(--tridactyl-fg);
     width: 90%;
     font-size: 1.5rem;
@@ -68,7 +54,8 @@
     padding: 1rem;
 }
 
-#completions table {    font-size: 0.8rem;
+#completions table {
+    font-size: 0.8rem;
     font-weight: 200;
     border-spacing: 0;
     table-layout: fixed;
@@ -77,13 +64,15 @@
     padding-bottom: 1rem;
 }
 
-#completions > div {    max-height: calc(20 * var(--option-height));
+#completions > div {
+    max-height: calc(20 * var(--option-height));
     min-height: calc(10 * var(--option-height));
 }
 
 /* COMPLETIONS */
 
-#completions {    --option-height: 1.4em;
+#completions {
+    --option-height: 1.4em;
     color: var(--tridactyl-fg);
     background: var(--tridactyl-bg);
     display: inline-block;
@@ -96,47 +85,56 @@
 }
 
 /* Olie doesn't know how CSS inheritance works */
-#completions .HistoryCompletionSource {    max-height: unset;
+#completions .HistoryCompletionSource {
+    max-height: unset;
     min-height: unset;
 }
 
-#completions .HistoryCompletionSource table {    width: 100%;
+#completions .HistoryCompletionSource table {
+    width: 100%;
     font-size: 9pt;
     border-spacing: 0;
     table-layout: fixed;
 }
 
 /* redundancy 2: redundancy 2: more redundancy */
-#completions .BmarkCompletionSource {    max-height: unset;
+#completions .BmarkCompletionSource {
+    max-height: unset;
     min-height: unset;
 }
 
-#completions table tr td.prefix,#completions table tr td.privatewindow,#completions table tr td.container,#completions table tr td.icon {    display: none;
+#completions table tr td.prefix,#completions table tr td.privatewindow,#completions table tr td.container,#completions table tr td.icon {
+    display: none;
 }
 
-#completions .BufferCompletionSource table {    width: unset;
+#completions .BufferCompletionSource table {
+    width: unset;
     font-size: unset;
     border-spacing: unset;
     table-layout: unset;
 }
 
-#completions table tr .title {    width: 50%;
+#completions table tr .title {
+    width: 50%;
 }
 
-#completions table tr {    white-space: nowrap;
+#completions table tr {
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-#completions .sectionHeader {    background: unset;
-    font-weight: 200;
+#completions .sectionHeader {
+    background: unset;
+    font-weight: bold;
     border-bottom: unset;
     padding: 1rem !important;
     padding-left: unset;
     padding-bottom: 0.2rem;
 }
 
-#cmdline_iframe {    position: fixed !important;
+#cmdline_iframe {
+    position: fixed !important;
     bottom: unset;
     top: 25% !important;
     left: 10% !important;
@@ -145,7 +143,8 @@
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px !important;
 }
 
-.TridactylStatusIndicator {    position: fixed !important;
+.TridactylStatusIndicator {
+    position: fixed !important;
     bottom: 0 !important;
     background: var(--tridactyl-bg) !important;
     border: unset !important;
@@ -155,17 +154,12 @@
     padding: 0.8ex !important;
 }
 
-#completions .focused {    background: var(--pink);
+#completions .focused {
+    background: var(--pink);
     color: var(--bg);
 }
 
-#completions .focused .url {    background: var(--pink);
+#completions .focused .url {
+    background: var(--pink);
     color: var(--bg);
 }
-/* #Ocean-normal { */
-/*  border-color: green !important; */
-/* } */
-
-/* #Ocean-insert { */
-/*  border-color: yellow !important; */
-/* } */

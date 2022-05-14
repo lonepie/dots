@@ -1,6 +1,4 @@
-local utils = require "core.utils"
-
-local map = utils.map
+local map = nvchad.map
 local cmd = vim.cmd
 local user_cmd = vim.api.nvim_create_user_command
 
@@ -9,7 +7,8 @@ local user_cmd = vim.api.nvim_create_user_command
 -- Useful when one wants to use that keymap for any other purpose
 
 -- Don't copy the replaced text after pasting in visual mode
-map("v", "p", "p:let @+=@0<CR>")
+-- https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text#Alternative_mapping_for_paste
+map("v", "p", 'p:let @+=@0<CR>:let @"=@0<CR>', { silent = true })
 
 -- Allow moving the cursor through wrapped lines with j, k, <Up> and <Down>
 -- http<cmd> ://www.reddit.com/r/vim/comments/2k4cbr/problem_with_gj_and_gk/
@@ -39,7 +38,7 @@ map("n", "<C-k>", "<C-w>k")
 map("n", "<C-j>", "<C-w>j")
 
 map("n", "<leader>x", function()
-   require("core.utils").close_buffer()
+   nvchad.close_buffer()
 end)
 
 map("n", "<C-c>", "<cmd> :%y+ <CR>") -- copy whole file content
@@ -91,7 +90,7 @@ cmd "silent! command! NvChadUpdate lua require('nvchad').update_nvchad()"
 map("n", "<leader>uu", "<cmd> :NvChadUpdate <CR>")
 
 -- load overriden misc mappings
-require("core.utils").load_config().mappings.misc()
+nvchad.load_config().mappings.misc()
 
 local M = {}
 
