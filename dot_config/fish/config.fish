@@ -6,7 +6,7 @@ if status is-interactive
     # set -a fish_complete_path ~/.local/share/fish/vendor_completions.d
     set -ag fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
     scheme set dracula
-    set -x EXA_STANDARD_OPTIONS --long --all --group --header --icons
+    set -x EXA_STANDARD_OPTIONS --long -aa --group --header --icons
     alias ls="exa --icons"
     alias bat="bat --theme=Dracula"
     alias cat=bat
