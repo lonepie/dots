@@ -1,9 +1,9 @@
 [credential "https://github.com"]
 	helper = 
-	helper = !/home/linuxbrew/.linuxbrew/Cellar/gh/2.9.0/bin/gh auth git-credential
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
-	helper = !/home/linuxbrew/.linuxbrew/Cellar/gh/2.9.0/bin/gh auth git-credential
+	helper = !/home/linuxbrew/.linuxbrew/bin/gh auth git-credential
 [user]
 	email = lonepie@gmail.com
 	name = Jon Rogers
