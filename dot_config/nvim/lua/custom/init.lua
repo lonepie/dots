@@ -2,8 +2,11 @@
 local o = vim.o
 local wo = vim.wo
 local bo = vim.bo
+local set = vim.opt
+local g = vim.g
 
 wo.wrap = false
+set.guifont = {"FiraCode Nerd Font Mono", ":h11"}
 
 -- MAPPINGS
 --["<leader>cd"] = {"<cmd> cd %:p:h"}

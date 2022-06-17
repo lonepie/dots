@@ -17,6 +17,11 @@ if vim.g.neovide == 1 then
   -- M.ui.transparency = false;
 end
 
+if vim.g.neovide
+  then
+    M.ui.transparency = false
+  end
+
 
 local userPlugins = require "custom.plugins"
 
