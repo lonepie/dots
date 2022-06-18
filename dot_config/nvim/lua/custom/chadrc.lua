@@ -9,13 +9,13 @@ M.ui = {
   theme = "chadracula",
 }
 
-if vim.g.neovide == 1 then
-  M.ui = {
-    transparency = false,
-    theme = "chadracula",
-  }
-  -- M.ui.transparency = false;
-end
+-- if vim.g.neovide == 1 then
+--   M.ui = {
+--     transparency = false,
+--     theme = "chadracula",
+--   }
+--   -- M.ui.transparency = false;
+-- end
 
 if vim.g.neovide
   then
