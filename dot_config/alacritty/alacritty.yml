@@ -205,9 +205,8 @@ scrolling:
 font:
   normal:
     family: FiraCode Nerd Font Mono
-    # style: Retina
-  size: 11
-
+    style: Retina
+  size: 10
 
 # Colors (Tomorrow Night)
 #colors:
