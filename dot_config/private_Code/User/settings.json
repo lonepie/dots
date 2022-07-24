@@ -1,0 +1,22 @@
+{
+    "workbench.colorTheme": "Dracula Refined",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'Cascadia Code', 'Cascadia Mono', 'Droid Sans Mono', 'monospace', monospace",
+    "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font Mono', monospace",
+    "editor.fontLigatures": "'ss01', 'ss19'",
+    "vim.enableNeovim": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            "before": ["L"],
+            "after": ["$"]
+        }
+    ],
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.leader":"<space>",
+    "vim.useCtrlKeys": false,
+}

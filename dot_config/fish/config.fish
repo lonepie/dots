@@ -1,4 +1,6 @@
-eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+if test -z "$HOMEBREW_PREFIX"
+  eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+end
 if status is-interactive
     #set -g BAT_THEME Dracula
     # Commands to run in interactive sessions can go here
@@ -12,6 +14,7 @@ if status is-interactive
     alias cat=bat
     alias vim=nvim
     set fzf_preview_dir_cmd exa --all --color=always --icons
+    zoxide init fish | source
 end
 
 function ssh

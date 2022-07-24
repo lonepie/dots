@@ -30,9 +30,14 @@ return {
       left = 0,
       right = 0
     },
-    leader = { key="/", mods="SUPER", timeout_milliseconds=1000 },
+    leader = { key="/", mods="ALT", timeout_milliseconds=1000 },
     keys = {
       {key="\\", mods="LEADER", action=act.SplitHorizontal{domain="CurrentPaneDomain"}},
+      {key="-", mods="LEADER", action=act.SplitVertical{domain="CurrentPaneDomain"}},
+      {key="c", mods="LEADER", action=act.CloseCurrentPane{confirm=true}},
+      {key="p", mods="LEADER", action=act.PasteFrom("PrimarySelection")},
+      {key="y", mods="LEADER", action=act.ActivateCopyMode},
+      {key="s", mods="LEADER", action=act.QuickSelect},
     },
     -- cursor_blink_rate = 800,
 }
