@@ -30,7 +30,7 @@ return {
       left = 0,
       right = 0
     },
-    leader = { key="/", mods="ALT", timeout_milliseconds=1000 },
+    leader = { key="a", mods="ALT", timeout_milliseconds=2000 },
     keys = {
       {key="\\", mods="LEADER", action=act.SplitHorizontal{domain="CurrentPaneDomain"}},
       {key="-", mods="LEADER", action=act.SplitVertical{domain="CurrentPaneDomain"}},
@@ -38,6 +38,16 @@ return {
       {key="p", mods="LEADER", action=act.PasteFrom("PrimarySelection")},
       {key="y", mods="LEADER", action=act.ActivateCopyMode},
       {key="s", mods="LEADER", action=act.QuickSelect},
+      {key="n", mods="LEADER", action=act.ActivateTabRelative(1)},
+      {key="N", mods="LEADER", action=act.ActivateTabRelative(-1)},
+      {key="h", mods="LEADER", action=act.ActivatePaneDirection('Left')},
+      {key="j", mods="LEADER", action=act.ActivatePaneDirection('Down')},
+      {key="k", mods="LEADER", action=act.ActivatePaneDirection('Up')},
+      {key="l", mods="LEADER", action=act.ActivatePaneDirection('Right')},
+      {key="H", mods="LEADER", action=act.AdjustPaneSize({'Left', 5})},
+      {key="J", mods="LEADER", action=act.AdjustPaneSize({'Down', 5})},
+      {key="K", mods="LEADER", action=act.AdjustPaneSize({'Up', 5})},
+      {key="L", mods="LEADER", action=act.AdjustPaneSize({'Right', 5})},
     },
     -- cursor_blink_rate = 800,
 }
