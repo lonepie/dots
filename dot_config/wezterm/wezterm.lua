@@ -48,6 +48,7 @@ return {
       {key="J", mods="LEADER", action=act.AdjustPaneSize({'Down', 5})},
       {key="K", mods="LEADER", action=act.AdjustPaneSize({'Up', 5})},
       {key="L", mods="LEADER", action=act.AdjustPaneSize({'Right', 5})},
+      {key="`", mods="LEADER", action=act.ShowLauncher},
     },
     -- cursor_blink_rate = 800,
 }
