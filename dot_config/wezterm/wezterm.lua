@@ -1,8 +1,16 @@
 local dracula = require 'dracula';
 local wezterm = require 'wezterm';
 local act = wezterm.action
+local mux = wezterm.mux
+
+wezterm.on('mix-startup', function()
+  local tab, pane, window = mux.spawn_window {}
+  pane:split { direction = 'Top' }
+end)
+
 return {
     colors = dracula,
+    color_scheme = "Dracula (Official)",
     tab_bar_at_bottom = true,
     hide_tab_bar_if_only_one_tab = true,
     use_fancy_tab_bar = false,
@@ -34,8 +42,11 @@ return {
     keys = {
       {key="\\", mods="LEADER", action=act.SplitHorizontal{domain="CurrentPaneDomain"}},
       {key="-", mods="LEADER", action=act.SplitVertical{domain="CurrentPaneDomain"}},
+      {key="t", mods="LEADER", action=act.SpawnTab "CurrentPaneDomain" },
       {key="c", mods="LEADER", action=act.CloseCurrentPane{confirm=true}},
       {key="p", mods="LEADER", action=act.PasteFrom("PrimarySelection")},
+      {key="a", mods="LEADER", action=act.AttachDomain "unix"},
+      {key="d", mods="LEADER", action=act.DetachDomain {DomainName="unix"}},
       {key="y", mods="LEADER", action=act.ActivateCopyMode},
       {key="s", mods="LEADER", action=act.QuickSelect},
       {key="n", mods="LEADER", action=act.ActivateTabRelative(1)},
@@ -50,5 +61,26 @@ return {
       {key="L", mods="LEADER", action=act.AdjustPaneSize({'Right', 5})},
       {key="`", mods="LEADER", action=act.ShowLauncher},
     },
-    -- cursor_blink_rate = 800,
+    default_cursor_style = "BlinkingBlock",
+    cursor_blink_rate = 1000,
+    cursor_blink_ease_in = "EaseOut",
+    cursor_blink_ease_out = "EaseOut",
+    ssh_domains = {
+      {
+        name = 'birbserv',
+        remote_address = 'birbserv',
+        username = 'jon'
+      },
+      {
+        name = 'procyon',
+        remote_address = 'procyon',
+        username = 'jon'
+      }
+    },
+    unix_domains = {
+      {
+        name = 'unix',
+      }
+    },
+    default_gui_startup_args = { 'connect', 'unix' },
 }

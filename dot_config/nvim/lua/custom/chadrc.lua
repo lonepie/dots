@@ -29,11 +29,6 @@ M.plugins = {
   user = userPlugins
 }
 
--- M.plugins = {
---   user = {
---   }
--- }
-
 M.mappings = require "custom.mappings"
 
 return M
