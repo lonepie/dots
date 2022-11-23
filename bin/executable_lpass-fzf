@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ -z $1 ]];
+then
+  lpass show -c --password $(lpass ls | fzf | awk '{print $(NF)}' | sed 's/\]//g') >& /dev/null
+else
+  query=$@
+  lpass show -c --password $(lpass ls | fzf -q "$query" | awk '{print $(NF)}' | sed 's/\]//g') >& /dev/null
+fi
