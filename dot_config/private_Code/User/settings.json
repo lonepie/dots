@@ -1,8 +1,8 @@
 {
     "workbench.colorTheme": "Dracula Refined",
     "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "'Cascadia Code', 'Cascadia Mono', 'Droid Sans Mono', 'monospace', monospace",
-    "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font Mono', monospace",
+    "editor.fontFamily": "'Victor Mono', 'Cascadia Code', 'Cascadia Mono', 'Droid Sans Mono', 'monospace', monospace",
+    "terminal.integrated.fontFamily": "'VictorMono Nerd Font Mono', 'CaskaydiaCove Nerd Font Mono', monospace",
     "editor.fontLigatures": "'ss01', 'ss19'",
     "vim.enableNeovim": true,
     "vim.normalModeKeyBindings": [
@@ -13,10 +13,38 @@
         {
             "before": ["L"],
             "after": ["$"]
+        },
+        {
+            "before": ["u"],
+            "commands": ["undo"]
+        },
+        {
+            "before": ["<C-r>"],
+            "commands": ["redo"]
         }
     ],
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
     "vim.leader":"<space>",
-    "vim.useCtrlKeys": false,
+    "vim.useCtrlKeys": true,
+    "redhat.telemetry.enabled": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "derpbox",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "derpbox",
+            "database": "wikijs",
+            "username": "admin"
+        }
+    ],
+    "remote.SSH.remotePlatform": {
+        "derpbox": "linux"
+    },
+    "path-intellisense.absolutePathToWorkspace": false,
+    "go.toolsManagement.autoUpdate": true,
+    "git.confirmSync": false,
+    "editor.tabSize": 2,
 }
