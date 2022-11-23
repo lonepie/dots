@@ -28,6 +28,8 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.keys.normal_mode["<s-l>"] = "$"
 lvim.keys.normal_mode["<s-h>"] = "^"
 lvim.keys.normal_mode["<leader>cd"] = "<cmd> cd %:p:h <CR>"
+lvim.keys.normal_mode["<tab>"] = ":BufferLineCycleNext<cr>"
+lvim.keys.normal_mode["<s-tab>"] = ":BufferLineCyclePrev<cr>"
 -- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 -- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping

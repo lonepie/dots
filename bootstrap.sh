@@ -5,7 +5,7 @@ sudo add-apt-repository ppa:fish-shell/release-3
 sudo add-apt-repository ppa:neovim-ppa/unstable
 
 #install packages
-sudo apt install -y fish neovim build-essential fzf
+sudo apt install -y fish neovim build-essential fzf ripgrep fd-find
 
 #install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
