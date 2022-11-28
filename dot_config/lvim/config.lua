@@ -8,10 +8,6 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
-local dracula = require("dracula")
-dracula.setup({
-  italic_comment = true,
-})
 
 -- general
 lvim.log.level = "warn"
@@ -178,10 +174,26 @@ lvim.builtin.lualine.style = "default"
 
 -- Additional Plugins
 lvim.plugins = {
-    {'Mofiqul/dracula.nvim'},
+    {
+      "Mofiqul/dracula.nvim",
+      config = function()
+        require("dracula").setup({
+          italic_comment = true,
+        })
+        vim.cmd("colorscheme dracula")
+      end,
+    },
     {
       "folke/trouble.nvim",
       cmd = "TroubleToggle",
+    },
+    {"gennaro-tedesco/nvim-jqx"},
+    {"hashivim/vim-terraform"},
+    {
+      "kylechui/nvim-surround",
+      config = function()
+        require("nvim-surround").setup({})
+      end,
     },
 }
 

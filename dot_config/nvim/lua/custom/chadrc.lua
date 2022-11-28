@@ -16,11 +16,26 @@ M.ui = {
 --   }
 --   -- M.ui.transparency = false;
 -- end
+-- if vim.fn.GuiName() == "nvim-qt" then
+--   M.ui = {
+--     transparency = false,
+--     theme = "chadracula",
+--   }
+-- end
 
-if vim.g.neovide
-  then
-    M.ui.transparency = false
-  end
+-- nvim_gui = false
+-- local ok, result = pcall(vim.fn.GuiName)
+-- nvim_gui = result
+-- if not ok then nvim_gui = true end
+-- if nvim_gui then
+--   M.ui.transparency = false
+-- end
+
+-- neovide-specific options
+if vim.g.neovide then
+  M.ui.transparency = false
+  vim.g.neovide_cursor_vfx_mode = "ripple"
+end
 
 
 local userPlugins = require "custom.plugins"

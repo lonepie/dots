@@ -16,6 +16,7 @@ if status is-interactive
       alias bat="bat --theme=Dracula"
       alias cat=bat
       alias vim=nvim
+      set -x EDITOR nvim
       set -x FZF_DEFAULT_OPTS "--color=fg:#f8f8f2,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4"
       set -x fzf_preview_dir_cmd exa --all --color=always --icons
       zoxide init fish | source
